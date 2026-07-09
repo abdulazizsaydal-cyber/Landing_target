@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taklifimiz — Abdul Saydaliyev | Targeting xizmati</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,500;0,700;0,800;1,600&family=Sanchez:ital@0;1&display=swap');
+
+  :root{
+    --bg: #0A0A0A;
+    --bg-card: #141210;
+    --gold: #C9A063;
+    --gold-light: #D8B57A;
+    --beige: #E6D4B5;
+    --beige-line: #D8C39C;
+    --text-dark: #241D12;
+    --text-dark-soft: #5B4F3B;
+    --hairline: rgba(201,160,99,0.28);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--beige);
+    font-family:'Sanchez',serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .display{
+    font-family:'Bodoni Moda',serif;
+    font-weight:700;
+  }
+
+  .label{
+    font-family:'Sanchez',serif;
+    font-size:12px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+  }
+
+  /* ---------- Luxury card frame ---------- */
+  .lux-card{
+    background:var(--bg-card);
+    border:1px solid var(--hairline);
+    border-radius:22px;
+    box-shadow:0 24px 60px rgba(0,0,0,0.45);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:70px 24px 56px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 85% -10%, rgba(201,160,99,0.14), transparent 45%),
+      var(--bg);
+  }
+
+  .hero-inner{
+    max-width:640px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    color:var(--gold);
+    margin-bottom:24px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px;height:1px;
+    background:var(--gold);
+    display:inline-block;
+  }
+
+  h1{
+    font-size:clamp(46px,10vw,78px);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+    color:var(--beige);
+    margin-bottom:8px;
+  }
+  h1 span{
+    background:linear-gradient(135deg, var(--gold-light), var(--gold));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .rule{
+    width:64px;height:2px;
+    background:linear-gradient(90deg, var(--gold), transparent);
+    margin:22px 0 26px;
+  }
+
+  .hero-sub{
+    font-size:17px;
+    line-height:1.65;
+    color:#CFC3AA;
+    max-width:480px;
+    margin-bottom:42px;
+  }
+
+  /* ---------- Video block ---------- */
+  .video-wrap{max-width:640px;margin:0 auto 30px;}
+
+  .video-stage{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:16px 16px 0 0;
+    overflow:hidden;
+    background:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+
+  .video-stage img.poster{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:brightness(0.82);
+  }
+
+  .video-stage video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+  }
+
+  .play-btn{
+    position:relative;
+    z-index:2;
+    width:72px;height:72px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--gold-light), var(--gold));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 0 0 14px rgba(201,160,99,0.12), 0 8px 24px rgba(0,0,0,0.4);
+    transition:transform 0.2s ease;
+  }
+  .video-stage:hover .play-btn{transform:scale(1.06);}
+  .play-btn svg{width:20px;height:20px;fill:#1A1508;margin-left:2px;}
+
+  .video-caption{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 20px;
+    border-top:1px solid var(--hairline);
+  }
+  .video-caption .name{
+    font-family:'Bodoni Moda',serif;
+    font-size:15px;
+    color:var(--beige);
+    font-weight:700;
+  }
+  .video-caption .role{
+    font-size:12px;
+    color:#8C816B;
+    margin-top:2px;
+  }
+  .video-caption .tag{
+    font-size:11px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+  }
+
+  /* ---------- Value chips ---------- */
+  .chips{
+    max-width:640px;
+    margin:36px auto 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .chip{
+    font-size:12.5px;
+    color:#CFC3AA;
+    border:1px solid var(--hairline);
+    padding:9px 16px;
+    border-radius:100px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .chip::before{
+    content:"";
+    width:5px;height:5px;
+    background:var(--gold);
+    border-radius:50%;
+    display:inline-block;
+  }
+
+  .proof{
+    max-width:640px;
+    margin:26px auto 0;
+    font-size:14.5px;
+    line-height:1.7;
+    color:#8C816B;
+  }
+  .proof strong{color:var(--gold-light);font-weight:600;}
+
+  /* ---------- Bridge ---------- */
+  .bridge{
+    background:var(--beige);
+    color:var(--text-dark);
+    padding:60px 24px 0;
+    text-align:center;
+  }
+  .bridge-inner{max-width:520px;margin:0 auto;}
+  .bridge .label{color:#8A6F3E;margin-bottom:16px;}
+  .bridge h2{
+    font-family:'Bodoni Moda',serif;
+    font-weight:700;
+    font-size:clamp(27px,5vw,36px);
+    margin-bottom:16px;
+    color:var(--text-dark);
+  }
+  .bridge p{
+    font-size:15px;
+    color:var(--text-dark-soft);
+    line-height:1.65;
+  }
+
+  /* ---------- Form ---------- */
+  .form-section{
+    background:var(--beige);
+    padding:44px 24px 84px;
+  }
+
+  .form-card{
+    max-width:520px;
+    margin:0 auto;
+    background:#FBF6EC;
+    border:1px solid var(--beige-line);
+    border-radius:22px;
+    box-shadow:0 20px 46px rgba(90,70,30,0.10);
+  }
+
+  .form-inner{padding:38px 32px;}
+
+  .field{margin-bottom:20px;}
+  .field label{
+    display:block;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--text-dark-soft);
+    margin-bottom:9px;
+  }
+
+  .field select,
+  .field input,
+  .field textarea{
+    width:100%;
+    font-family:'Sanchez',serif;
+    font-size:15px;
+    color:var(--text-dark);
+    background:#fff;
+    border:1px solid var(--beige-line);
+    border-radius:10px;
+    padding:13px 14px;
+    outline:none;
+    transition:border-color 0.15s ease;
+  }
+  .field select:focus,
+  .field input:focus,
+  .field textarea:focus{
+    border-color:var(--gold);
+  }
+  .field textarea{resize:vertical;min-height:80px;font-family:'Sanchez',serif;}
+
+  .row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:480px){.row-2{grid-template-columns:1fr;}}
+
+  .submit-btn{
+    width:100%;
+    padding:17px;
+    background:linear-gradient(135deg, var(--gold-light), var(--gold));
+    color:#251D0E;
+    border:none;
+    border-radius:10px;
+    font-family:'Bodoni Moda',serif;
+    font-weight:700;
+    font-size:15.5px;
+    letter-spacing:0.01em;
+    cursor:pointer;
+    margin-top:6px;
+    transition:opacity 0.15s ease;
+  }
+  .submit-btn:hover{opacity:0.88;}
+
+  .form-note{
+    font-size:12px;
+    color:#8C816B;
+    text-align:center;
+    margin-top:16px;
+  }
+
+  .success-msg{display:none;text-align:center;padding:20px 6px 4px;}
+  .success-msg .check{
+    width:46px;height:46px;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--gold-light), var(--gold));
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 14px;
+  }
+  .success-msg .check svg{width:20px;height:20px;stroke:#251D0E;}
+  .success-msg h3{
+    font-family:'Bodoni Moda',serif;
+    font-size:20px;
+    color:var(--text-dark);
+    margin-bottom:6px;
+  }
+  .success-msg p{font-size:14px;color:var(--text-dark-soft);}
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--beige);
+    border-top:1px solid var(--beige-line);
+    padding:24px 24px 32px;
+    text-align:center;
+  }
+  footer .brand{
+    font-family:'Bodoni Moda',serif;
+    font-weight:700;
+    font-size:15px;
+    color:var(--text-dark);
+    margin-bottom:6px;
+    letter-spacing:0.02em;
+  }
+  footer .handles{font-size:12.5px;color:var(--text-dark-soft);}
+  footer .handles span{color:#8A6F3E;}
+</style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow label">Abdul Saydaliyev — Targeting xizmati</div>
+      <h1 class="display">Taklif<span>imiz</span></h1>
+      <div class="rule"></div>
+      <p class="hero-sub">Bizingizga mijoz olib keladigan reklama tizimini quramiz — auditoriyani aniq belgilab, byudjetingizni sotuvga aylantiramiz. Video orqali qisqacha tanishtiramiz.</p>
+
+      <div class="video-wrap">
+        <div class="lux-card">
+          <div class="video-stage" onclick="playVideo(this)">
+            <img class="poster" src="taklif-poster.jpg" alt="Abdul Saydaliyev">
+            <video playsinline poster="taklif-poster.jpg">
+              <source src="taklif-video.mp4" type="video/mp4">
+            </video>
+            <div class="play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="video-caption">
+            <div>
+              <div class="name">Abdul Saydaliyev</div>
+              <div class="role">Targeting mutaxassisi</div>
+            </div>
+            <div class="tag">Taklif</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chips">
+        <div class="chip">Auditoriya tahlili</div>
+        <div class="chip">Kreativ strategiya</div>
+        <div class="chip">Kunlik nazorat va hisobot</div>
+      </div>
+
+      <p class="proof">Canvas Design, Aziz Uylar va O'zbegim kabi bizneslar bilan ishlab, <strong>200 000+ auditoriya</strong> qamrovi va sifatli mijoz oqimini ta'minlagan tajribamiz bor.</p>
+    </div>
+  </section>
+
+  <!-- ============ BRIDGE ============ -->
+  <section class="bridge">
+    <div class="bridge-inner">
+      <div class="label">Keyingi qadam</div>
+      <h2>Bepul 30 daqiqalik konsultatsiya</h2>
+      <p>Pastdagi savollarga javob bering. Biznesingizni ko'rib chiqamiz va 24 soat ichida bog'lanamiz.</p>
+    </div>
+  </section>
+
+  <!-- ============ FORM ============ -->
+  <section class="form-section">
+    <div class="form-card">
+      <div class="form-inner">
+
+        <form id="leadForm">
+          <div class="field">
+            <label>Biznesingiz yo'nalishi</label>
+            <select required>
+              <option value="" disabled selected>Tanlang</option>
+              <option>Savdo</option>
+              <option>Xizmat ko'rsatish</option>
+              <option>Qurilish / Ko'chmas mulk</option>
+              <option>Restoran / Kafe</option>
+              <option>Boshqa</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Oylik reklama byudjeti</label>
+            <select required>
+              <option value="" disabled selected>Tanlang</option>
+              <option>1 mln so'mgacha</option>
+              <option>1–5 mln so'm</option>
+              <option>5–15 mln so'm</option>
+              <option>15 mln so'mdan yuqori</option>
+              <option>Hali byudjet ajratmaganman</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>Sizni eng ko'p qiynayotgan muammo</label>
+            <textarea placeholder="Masalan: mijozlar kam, byudjet behuda ketayapti, natijani tushunmayapman..." required></textarea>
+          </div>
+
+          <div class="row-2">
+            <div class="field">
+              <label>Ismingiz</label>
+              <input type="text" placeholder="Ismingiz" required>
+            </div>
+            <div class="field">
+              <label>Telefon raqamingiz</label>
+              <input type="tel" placeholder="+998" required>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Ariza yuborish</button>
+          <div class="form-note">Ma'lumotlaringiz faqat aloqa uchun ishlatiladi.</div>
+        </form>
+
+        <div class="success-msg" id="successMsg">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Arizangiz qabul qilindi</h3>
+          <p>Tez orada siz bilan bog'lanamiz.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">abdul.saydal</div>
+    <div class="handles">Telegram: <span>@abdulazizsaydaliyev</span> &nbsp;·&nbsp; Instagram: <span>@abdul.saydal</span></div>
+  </footer>
+
+  <script>
+    function playVideo(stage){
+      const video = stage.querySelector('video');
+      const poster = stage.querySelector('.poster');
+      const playBtn = stage.querySelector('.play-btn');
+      video.style.display = 'block';
+      poster.style.display = 'none';
+      playBtn.style.display = 'none';
+      video.setAttribute('controls', 'true');
+      video.play();
+    }
+
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      // Bu yerga so'rov yuborish kodi qo'shiladi:
+      // - Telegram bot webhook (masalan, Railway'dagi botga POST)
+      // - yoki Google Sheets / CRM integratsiyasi
+      this.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
