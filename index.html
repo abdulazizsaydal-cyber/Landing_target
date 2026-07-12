@@ -565,6 +565,8 @@
       playBtn.style.display = 'none';
       video.setAttribute('controls', 'true');
       video.play();
+      stage.removeAttribute('onclick');
+      stage.style.cursor = 'default';
     }
 
     document.getElementById('leadForm').addEventListener('submit', async function(e){
