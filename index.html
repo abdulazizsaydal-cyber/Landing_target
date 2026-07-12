@@ -8,15 +8,15 @@
   @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
   :root{
-    --bg: #0A0A0A;
-    --bg-card: #141210;
-    --gold: #C9A063;
-    --gold-light: #D8B57A;
-    --beige: #E6D4B5;
-    --beige-line: #D8C39C;
-    --text-dark: #241D12;
-    --text-dark-soft: #5B4F3B;
-    --hairline: rgba(201,160,99,0.28);
+    --bg: #16181C;
+    --bg-card: #1D2026;
+    --gold: #7FBFEE;
+    --gold-light: #CFEAFF;
+    --beige: #E9EEF2;
+    --beige-line: #D7E4EE;
+    --text-dark: #12161C;
+    --text-dark-soft: #4A5560;
+    --hairline: rgba(168,216,255,0.28);
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -55,7 +55,7 @@
     padding:70px 24px 56px;
     overflow:hidden;
     background:
-      radial-gradient(circle at 85% -10%, rgba(201,160,99,0.14), transparent 45%),
+      radial-gradient(circle at 85% -10%, rgba(127,191,238,0.20), transparent 45%),
       var(--bg);
   }
 
@@ -97,7 +97,7 @@
     font-size:17px;
     font-weight:500;
     line-height:1.55;
-    color:#CFC3AA;
+    color:#B9C7D4;
     max-width:460px;
     margin-top:22px;
   }
@@ -111,7 +111,7 @@
   .hero-sub{
     font-size:17px;
     line-height:1.65;
-    color:#CFC3AA;
+    color:#B9C7D4;
     max-width:480px;
     margin-bottom:42px;
   }
@@ -159,11 +159,11 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    box-shadow:0 0 0 14px rgba(201,160,99,0.12), 0 8px 24px rgba(0,0,0,0.4);
+    box-shadow:0 0 0 14px rgba(127,191,238,0.22), 0 8px 24px rgba(0,0,0,0.4);
     transition:transform 0.2s ease;
   }
   .video-stage:hover .play-btn{transform:scale(1.06);}
-  .play-btn svg{width:20px;height:20px;fill:#1A1508;margin-left:2px;}
+  .play-btn svg{width:20px;height:20px;fill:#0C1620;margin-left:2px;}
 
   .video-caption{
     display:flex;
@@ -180,7 +180,7 @@
   }
   .video-caption .role{
     font-size:12px;
-    color:#8C816B;
+    color:#7A8A96;
     margin-top:2px;
   }
   .video-caption .tag{
@@ -210,7 +210,7 @@
   }
   .marquee-track span{
     font-size:13px;
-    color:#CFC3AA;
+    color:#B9C7D4;
     white-space:nowrap;
     display:flex;
     align-items:center;
@@ -233,9 +233,24 @@
     margin:26px auto 0;
     font-size:14.5px;
     line-height:1.7;
-    color:#8C816B;
+    color:#7A8A96;
   }
   .proof strong{color:var(--gold-light);font-weight:600;}
+
+  .hero-cta{
+    display:inline-flex;
+    align-items:center;
+    font-family:'Libre Caslon Display',serif;
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+    color:#0C1620;
+    background:linear-gradient(135deg, var(--gold-light), var(--gold));
+    padding:15px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    margin-bottom:38px;
+  }
 
   .result-badge{
     max-width:640px;
@@ -243,7 +258,7 @@
     padding:22px 24px 20px;
     border-top:1px solid var(--hairline);
     border-bottom:1px solid var(--hairline);
-    background:linear-gradient(180deg, rgba(201,160,99,0.06), transparent);
+    background:linear-gradient(180deg, rgba(127,191,238,0.10), transparent);
   }
   .result-badge-label{
     font-family:'Work Sans',sans-serif;
@@ -256,7 +271,7 @@
   .result-badge p{
     font-size:14.5px;
     line-height:1.7;
-    color:#B7AB8F;
+    color:#96A6B2;
     margin:0;
   }
   .result-badge strong{color:var(--gold-light);font-weight:600;}
@@ -284,7 +299,7 @@
     text-align:center;
   }
   .bridge-inner{max-width:520px;margin:0 auto;}
-  .bridge .label{color:#8A6F3E;margin-bottom:16px;}
+  .bridge .label{color:#2E6A8E;margin-bottom:16px;}
   .bridge h2{
     font-family:'Libre Caslon Display',serif;
     font-weight:700;
@@ -307,10 +322,10 @@
   .form-card{
     max-width:520px;
     margin:0 auto;
-    background:#FBF6EC;
+    background:#F1F7FA;
     border:1px solid var(--beige-line);
     border-radius:22px;
-    box-shadow:0 20px 46px rgba(90,70,30,0.10);
+    box-shadow:0 20px 46px rgba(30,70,90,0.12);
   }
 
   .form-inner{padding:38px 32px;}
@@ -353,7 +368,7 @@
     width:100%;
     padding:17px;
     background:linear-gradient(135deg, var(--gold-light), var(--gold));
-    color:#251D0E;
+    color:#0C1620;
     border:none;
     border-radius:10px;
     font-family:'Libre Caslon Display',serif;
@@ -368,7 +383,7 @@
 
   .form-note{
     font-size:12px;
-    color:#8C816B;
+    color:#7A8A96;
     text-align:center;
     margin-top:16px;
   }
@@ -381,7 +396,7 @@
     display:flex;align-items:center;justify-content:center;
     margin:0 auto 14px;
   }
-  .success-msg .check svg{width:20px;height:20px;stroke:#251D0E;}
+  .success-msg .check svg{width:20px;height:20px;stroke:#0C1620;}
   .success-msg h3{
     font-family:'Libre Caslon Display',serif;
     font-size:20px;
@@ -406,7 +421,7 @@
     letter-spacing:0.02em;
   }
   footer .handles{font-size:12.5px;color:var(--text-dark-soft);}
-  footer .handles span{color:#8A6F3E;}
+  footer .handles span{color:#2E6A8E;}
 </style>
 </head>
 <body>
@@ -416,8 +431,10 @@
     <div class="hero-inner">
       <div class="eyebrow label">Abdul.saydal</div>
       <h1 class="display">14 kun ichida biznesingizga <span>yangi mijozlar</span> olib kelamiz</h1>
-      <div class="tagline">Sifatli va arzon lead emas — biz sotuv qilishda yordam beramiz. Auditoriyani aniq belgilab, byudjetingizni real xaridorga aylantiramiz va natijani raqamda ko'rsatamiz.</div>
+      <div class="tagline">Sifatli va arzon lead emas — biz sotuv qilishda yordam beramiz. Auditoriyani aniq belgilab, byudjetingizni haqiqiy xaridorga aylantiramiz va natijani raqamda ko'rsatamiz.</div>
       <div class="rule"></div>
+
+      <a href="#leadForm" class="hero-cta">Bepul konsultatsiyaga yozilaman</a>
 
       <div class="result-badge">
         <div class="result-badge-label">Natija</div>
