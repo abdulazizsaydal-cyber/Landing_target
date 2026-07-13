@@ -103,6 +103,14 @@
     margin:22px auto 0;
   }
 
+  .section-divider{
+    max-width:640px;
+    height:2px;
+    margin:32px auto 30px;
+    background:linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    box-shadow:0 0 14px rgba(127,191,238,0.55);
+  }
+
   .rule{
     width:64px;height:2px;
     background:linear-gradient(90deg, var(--gold), transparent);
@@ -265,19 +273,9 @@
     background:rgba(127,191,238,0.10);
     border:1px solid rgba(127,191,238,0.35);
     border-radius:16px;
-    padding:12px 22px 22px;
+    padding:12px 22px;
     margin-bottom:34px;
     position:relative;
-  }
-  .hook-neon::after{
-    content:"";
-    position:absolute;
-    bottom:9px; left:50%;
-    transform:translateX(-50%);
-    width:100px;
-    height:2px;
-    background:linear-gradient(90deg, transparent, var(--gold-light), transparent);
-    box-shadow:0 0 12px rgba(127,191,238,0.8);
   }
   .eyebrow-hook{
     margin-bottom:26px;
@@ -406,6 +404,7 @@
     h1{font-size:clamp(24px,7vw,30px);margin-bottom:6px;}
     .tagline{font-size:14px;line-height:1.45;margin:12px auto 0;}
     .rule{margin:14px auto 16px;}
+    .section-divider{margin:20px auto 18px;}
     .result-badge{padding:16px 18px 14px;margin:0 auto 18px;}
     .result-badge p{font-size:13px;line-height:1.5;}
     .video-sticker{margin-top:10px;padding:6px 13px;font-size:10px;}
@@ -479,9 +478,9 @@
       <a href="#proof-video" class="hook-neon eyebrow-hook">Qanday qilib $100 000 lik sotuv qildik — to'liq pastdagi videoda</a>
       <h1 class="display">14 kun ichida biznesingizga <span>yangi mijozlar</span> olib kelamiz</h1>
       <div class="tagline">Reklama uchun sarflangan $1 ham investitsiya bo'lishida yordam beramiz. Arzon va sifatli lead olib kelish emas — sotuv qilish uchun harakat qilamiz.</div>
-      <div class="rule"></div>
 
-      
+      <div class="section-divider"></div>
+
       <div class="result-badge">
         <div class="result-badge-label">Natija</div>
         <p>Amaranth Mebel loyihamizda 3 oyda <strong>$50 000</strong> savdo qilish bo'yicha shartnoma tuzgan edik — birinchi oyning o'zida <strong>$100 000</strong> savdo amalga oshirdik. Bu qanday bo'lgani haqida biznes egasi bilan suhbat qilganmiz — video to'liq.</p>
