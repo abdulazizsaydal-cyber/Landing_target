@@ -254,24 +254,27 @@
   }
 
   .hook-neon{
-    display:block;
+    display:inline-block;
     font-family:'Work Sans',sans-serif;
     font-size:14px;
     font-weight:600;
     letter-spacing:0.01em;
     color:var(--gold-light);
     text-decoration:none;
-    text-shadow:0 0 14px rgba(127,191,238,0.65), 0 0 34px rgba(127,191,238,0.35);
-    padding-bottom:14px;
+    text-shadow:0 0 14px rgba(127,191,238,0.5), 0 0 30px rgba(127,191,238,0.25);
+    background:rgba(127,191,238,0.10);
+    border:1px solid rgba(127,191,238,0.35);
+    border-radius:16px;
+    padding:12px 22px 22px;
     margin-bottom:34px;
     position:relative;
   }
   .hook-neon::after{
     content:"";
     position:absolute;
-    bottom:0; left:50%;
+    bottom:9px; left:50%;
     transform:translateX(-50%);
-    width:120px;
+    width:100px;
     height:2px;
     background:linear-gradient(90deg, transparent, var(--gold-light), transparent);
     box-shadow:0 0 12px rgba(127,191,238,0.8);
@@ -396,6 +399,18 @@
   .row-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   @media (max-width:480px){.row-2{grid-template-columns:1fr;}}
 
+  @media (max-width:480px){
+    .hero{padding:36px 20px 30px;}
+    .hook-neon{font-size:12.5px;margin-bottom:16px;padding-bottom:10px;}
+    .eyebrow-hook{margin-bottom:16px;}
+    h1{font-size:clamp(24px,7vw,30px);margin-bottom:6px;}
+    .tagline{font-size:14px;line-height:1.45;margin:12px auto 0;}
+    .rule{margin:14px auto 16px;}
+    .result-badge{padding:16px 18px 14px;margin:0 auto 18px;}
+    .result-badge p{font-size:13px;line-height:1.5;}
+    .video-sticker{margin-top:10px;padding:6px 13px;font-size:10px;}
+  }
+
   .submit-btn{
     width:100%;
     padding:17px;
@@ -463,11 +478,10 @@
     <div class="hero-inner">
       <a href="#proof-video" class="hook-neon eyebrow-hook">Qanday qilib $100 000 lik sotuv qildik — to'liq pastdagi videoda</a>
       <h1 class="display">14 kun ichida biznesingizga <span>yangi mijozlar</span> olib kelamiz</h1>
-      <div class="tagline">Sifatli va arzon lead emas — biz sotuv qilishda yordam beramiz. Auditoriyani aniq belgilab, byudjetingizni haqiqiy xaridorga aylantiramiz va natijani raqamda ko'rsatamiz.</div>
+      <div class="tagline">Reklama uchun sarflangan $1 ham investitsiya bo'lishida yordam beramiz. Arzon va sifatli lead olib kelish emas — sotuv qilish uchun harakat qilamiz.</div>
       <div class="rule"></div>
 
-      <a href="#leadForm" class="hero-cta">Bepul konsultatsiya</a>
-
+      
       <div class="result-badge">
         <div class="result-badge-label">Natija</div>
         <p>Amaranth Mebel loyihamizda 3 oyda <strong>$50 000</strong> savdo qilish bo'yicha shartnoma tuzgan edik — birinchi oyning o'zida <strong>$100 000</strong> savdo amalga oshirdik. Bu qanday bo'lgani haqida biznes egasi bilan suhbat qilganmiz — video to'liq.</p>
